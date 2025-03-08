@@ -1,15 +1,15 @@
 import Input from  './Input'
-import TextField from  './TextField'
 import Button from './Button'
 
-const Experience = () => {
+const Experience = ({ buttonText, onClick }) => {
+
   return (
     <>
-      <Input id={id} type={type} placeholder={placeholder} />
-      <Input id={id} type={type} placeholder={placeholder} />
-      <TextField id={id} type={type} placeholder={placeholder} />
-      <Button text={'submit'} onClick={handleClickSubmit}/>
-      <Button text={'edit'} onClick={handleClickEdit}/>
+      <Input id={'text'} type={'text'} placeholder={'Company Name'} />
+      <Input id={'text'} type={'text'} placeholder={'Position Title'} />
+      <Input id={'text'} type={'text'} placeholder={'Job Duties'} />
+      <Input id={'date'} type={'date'} placeholder={'Dates of Employment'} />
+      <Button text={buttonText} onClick={onClick}/>
     </>
   )
 }

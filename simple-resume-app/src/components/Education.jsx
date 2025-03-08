@@ -1,15 +1,14 @@
 import Input from  './Input'
-import Date from  './Date'
 import Button from './Button'
 
-const Education = () => {
+const Education = ({ buttonText, onClick }) => {
+  
   return (
     <>
-      <Input id={id} type={type} placeholder={placeholder} />
-      <Input id={id} type={type} placeholder={placeholder} />
-      <Date id={id} type={type} placeholder={placeholder} />
-      <Button text={'submit'} onClick={handleClickSubmit}/>
-      <Button text={'edit'} onClick={handleClickEdit}/>
+      <Input id={'text'} type={'text'} placeholder={'School Name'} />
+      <Input id={'text'} type={'text'} placeholder={'Your Major'} />
+      <Input id={'date'} type={'date'} placeholder={'Graduation Date'} />
+      <Button text={buttonText} onClick={onClick}/>
     </>
   )
 }

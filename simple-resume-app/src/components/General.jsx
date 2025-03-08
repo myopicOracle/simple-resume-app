@@ -1,15 +1,14 @@
 import Input from  './Input'
-import Phone from  './Phone'
 import Button from './Button'
 
-const General = () => {
+const General = ({ buttonText, onClick }) => {
+
   return (
     <>
-      <Input id={id} type={type} placeholder={placeholder} />
-      <Input id={id} type={type} placeholder={placeholder} />
-      <Phone id={id} type={type} placeholder={placeholder} />
-      <Button text={'submit'} onClick={handleClickSubmit}/>
-      <Button text={'edit'} onClick={handleClickEdit}/>
+      <Input id={'text'} type={'text'} placeholder={'Your Name'} />
+      <Input id={'email'} type={'email'} placeholder={'Your Email'} />
+      <Input id={'tel'} type={'tel'} placeholder={'Your Phone Number'} />
+      <Button text={buttonText} onClick={onClick}/>
     </>
   )
 }
