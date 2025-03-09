@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Input from "./Input";
 import Button from "./Button";
 
-const General = ( props ) => {
-  if (props.showForm) {
+const General = (props) => {
+  const [showForm, setShowForm] = useState(true);
+
+  if (showForm) {
     return (
       <>
         <h2>Summary Info</h2>
@@ -30,7 +33,10 @@ const General = ( props ) => {
           placeholder="Your Phone Number"
           onChange={props.onChange}
         />
-        <Button text={props.buttonText} onClick={props.onClick} />
+        <Button
+          text={showForm ? "submit" : "edit"}
+          onClick={() => setShowForm(!showForm)}
+        />
       </>
     );
   }
@@ -42,6 +48,10 @@ const General = ( props ) => {
         <li>{props.email}</li>
         <li>{props.phone}</li>
       </ul>
+      <Button
+        text={showForm ? "submit" : "edit"}
+        onClick={() => setShowForm(!showForm)}
+      />
     </>
   );
 };

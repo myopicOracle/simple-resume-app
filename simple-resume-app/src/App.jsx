@@ -24,57 +24,56 @@ function App() {
   //   duties: '',
   //   workDate: '',
   // })
-  const  [ formInputs, setFormInputs ] = useState({
-    showForm: true,
+  const [formInputs, setFormInputs] = useState({
     personName: "",
     email: "",
     phone: "",
-    school: '',
-    major: '',
-    gradDate: '',
-    employer: '',
-    position: '',
-    duties: '',
-    workDate: '',
-  })
+    school: "",
+    major: "",
+    gradDate: "",
+    employer: "",
+    position: "",
+    duties: "",
+    workDate: "",
+  });
 
   const handleInputChange = (e) => {
-    const [ name, value ] = e.target
-    setFormInputs((otherInputs) => ({
-      ...otherInputs, 
-      [name]: value,
-    }))
-  };
-
-  const handleSubmitButton = () => {
+    const { name, value } = e.target;
     setFormInputs((otherInputs) => ({
       ...otherInputs,
-      showForm: !showForm,
-    }))
+      [name]: value,
+    }));
   };
+
+  // const handleSubmitButton = () => {
+  //   setFormInputs((otherInputs) => ({
+  //     ...otherInputs,
+  //     showForm: !formInputs.showForm,
+  //   }))
+  // };
 
   return (
     <>
       <h1>Hello World.</h1>
       <General
-        showForm={formInputs.showForm}
         personName={formInputs.personName}
         email={formInputs.email}
         phone={formInputs.phone}
         onChange={handleInputChange}
-        onClick={handleSubmitButton}
-        buttonText={formInputs.showForm ? "submit" : "edit"}
       />
-      {/* <Education
-        showForm={showForm}
-        onClick={handleClick}
-        buttonText={showForm ? "submit" : "edit"}
+      <Education
+        school={formInputs.school}
+        major={formInputs.major}
+        gradDate={formInputs.gradDate}
+        onChange={handleInputChange}
       />
       <Experience
-        showForm={showForm}
-        onClick={handleClick}
-        buttonText={showForm ? "submit" : "edit"}
-      /> */}
+        employer={formInputs.employer}
+        position={formInputs.position}
+        duties={formInputs.duties}
+        workDate={formInputs.workDate}
+        onChange={handleInputChange}
+      />
     </>
   );
 }
