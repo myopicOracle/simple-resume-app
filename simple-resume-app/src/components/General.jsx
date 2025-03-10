@@ -7,7 +7,7 @@ const General = (props) => {
 
   if (showForm) {
     return (
-      <>
+      <div id='general-container'>
         <h2>Summary Info</h2>
         <Input
           id="personName"
@@ -37,22 +37,22 @@ const General = (props) => {
           text={showForm ? "submit" : "edit"}
           onClick={() => setShowForm(!showForm)}
         />
-      </>
+      </div>
     );
   }
   return (
-    <>
+    <div id='general-container'>
       <h2>Summary Info</h2>
       <ul>
-        <li>{props.personName}</li>
-        <li>{props.email}</li>
-        <li>{props.phone}</li>
+        <li><strong>Name: </strong>{props.personName}</li>
+        <li><strong>Email: </strong>{props.email}</li>
+        <li><strong>Phone Number: </strong>{props.phone}</li>
       </ul>
       <Button
         text={showForm ? "submit" : "edit"}
         onClick={() => setShowForm(!showForm)}
       />
-    </>
+    </div>
   );
 };
 

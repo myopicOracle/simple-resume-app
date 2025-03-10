@@ -7,7 +7,7 @@ const Experience = (props) => {
 
   if (showForm) {
     return (
-      <>
+      <div id='experience-container'>
         <h2>Professional Experience</h2>
         <Input
           id="employer"
@@ -45,23 +45,23 @@ const Experience = (props) => {
           text={showForm ? "submit" : "edit"}
           onClick={() => setShowForm(!showForm)}
         />
-      </>
+      </div>
     );
   }
   return (
-    <>
+    <div id='experience-container'>
       <h2>Professional Experience</h2>
       <ul>
-        <li>{props.employer}</li>
-        <li>{props.position}</li>
-        <li>{props.duties}</li>
-        <li>{props.workDate}</li>
+        <li><strong>Company Name: </strong>{props.employer}</li>
+        <li><strong>Position Title: </strong>{props.position}</li>
+        <li><strong>Job Duties: </strong>{props.duties}</li>
+        <li><strong>Dates of Employment: </strong>{props.workDate}</li>
       </ul>
       <Button
         text={showForm ? "submit" : "edit"}
         onClick={() => setShowForm(!showForm)}
       />
-    </>
+    </div>
   );
 };
 

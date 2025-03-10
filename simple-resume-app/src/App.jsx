@@ -53,7 +53,7 @@ function App() {
   // };
 
   return (
-    <>
+    <div id='main'>
       <h1>Resume Builder 1.0</h1>
       <General
         personName={formInputs.personName}
@@ -74,7 +74,7 @@ function App() {
         workDate={formInputs.workDate}
         onChange={handleInputChange}
       />
-    </>
+    </div>
   );
 }
 
