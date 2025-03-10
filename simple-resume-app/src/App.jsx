@@ -54,7 +54,7 @@ function App() {
 
   return (
     <>
-      <h1>Hello World.</h1>
+      <h1>Resume Builder 1.0</h1>
       <General
         personName={formInputs.personName}
         email={formInputs.email}
