@@ -5,25 +5,7 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 
 function App() {
-  // const  [ formGeneral, setFormGeneral ] = useState({
-  //   showForm: true,
-  //   personName: "",
-  //   email: "",
-  //   phone: "",
-  // });
-  // const [ formEducation , setFormEducation ] = useState({
-  //   showForm: true,
-  //   school: '',
-  //   major: '',
-  //   gradDate: '',
-  // })
-  // const [ formExperience , setFormExperience ] = useState({
-  //   showForm: true,
-  //   employer: '',
-  //   position: '',
-  //   duties: '',
-  //   workDate: '',
-  // })
+
   const [formInputs, setFormInputs] = useState({
     personName: "",
     email: "",
@@ -44,13 +26,6 @@ function App() {
       [name]: value,
     }));
   };
-
-  // const handleSubmitButton = () => {
-  //   setFormInputs((otherInputs) => ({
-  //     ...otherInputs,
-  //     showForm: !formInputs.showForm,
-  //   }))
-  // };
 
   return (
     <div id='main'>
